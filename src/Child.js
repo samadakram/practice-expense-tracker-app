@@ -3,13 +3,16 @@ import {TransactionContext} from './TransContext';
 
 function Child(){
 
-    let {transactions} = useContext(TransactionContext);
+    let {transactions,addTransaction} = useContext(TransactionContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
 
     const handleAddition = (event)=>{
         event.preventDefault()
-        console.log(newDesc, newAmount);
+        addTransaction({
+            amount: newAmount,
+            desc: newDesc
+        })
     }
     
     return(
