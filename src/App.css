@@ -21,3 +21,11 @@
     margin: 10px 0;
     padding: 5px 0;
 }
+.transaction-list{
+    margin: 0;
+    padding: 0;
+}
+.transaction-list > li{
+    display: flex;
+    justify-content: space-between;
+}
