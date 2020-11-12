@@ -24,8 +24,8 @@ function Child(){
                     {transactions.map((transObj, ind)=>{
                         return(
                             <li>
-                        <span>Cash</span>
-                        <span>+500</span>
+                        <span> {transObj.desc} </span>
+                        <span> {transObj.amount} </span>
                     </li>
                         )
                     })}
