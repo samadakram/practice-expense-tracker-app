@@ -13,7 +13,12 @@ function Child(){
             </div>
             <h3>History</h3>
             <hr/>
-
+                <ul className="transaction-list">
+                    <li>
+                        <span>Cash</span>
+                        <span>+500</span>
+                    </li>
+                </ul>
             <h3>Add new transaction</h3>
             <hr/>
 
