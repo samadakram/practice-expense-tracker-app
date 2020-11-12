@@ -18,6 +18,16 @@ function Child(){
                         <span>Cash</span>
                         <span>+500</span>
                     </li>
+
+                    <li>
+                        <span>Cash</span>
+                        <span>+500</span>
+                    </li>
+
+                    <li>
+                        <span>Cash</span>
+                        <span>+500</span>
+                    </li>
                 </ul>
             <h3>Add new transaction</h3>
             <hr/>
