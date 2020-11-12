@@ -14,6 +14,25 @@ function Child(){
             desc: newDesc
         })
     }
+    const getIncome = ()=>{
+        let income = 0;
+        for (var i=0; i < transactions.length; i++){
+            if (transactions[i].amount > 0){
+                income += transactions[i].amount
+            }
+        }
+        return income;
+    }
+
+    const getExpense = ()=>{
+        let expense = 0;
+        for (var i=0; i < transactions.length; i++){
+            if(transactions[i].amount < 0){
+                expense += transactions[i].amount
+            }
+        }
+        return expense;
+    }
     
     return(
         <div className="container">
@@ -22,8 +41,8 @@ function Child(){
             <h3>Your Balance <br/> $260 </h3>
 
             <div className="expense-container">
-                <h3>INCOME <br/> $500 </h3>
-                <h3>EXPENSE <br/> $240 </h3>
+                <h3>INCOME <br/> {getIncome()} </h3>
+                <h3>EXPENSE <br/> {getExpense()} </h3>
             </div>
             <h3>History</h3>
             <hr/>
