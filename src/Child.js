@@ -4,6 +4,10 @@ import {TransactionContext} from './TransContext';
 function Child(){
 
     let {transactions} = useContext(TransactionContext);
+
+    const handleAddition = (event)=>{
+        event.preventDefault()
+    }
     
     return(
         <div className="container">
@@ -30,7 +34,7 @@ function Child(){
             <h3>Add new transaction</h3>
             <hr/>
 
-            <form className="transaction-form">
+            <form className="transaction-form" onSubmit={handleAddition} >
                 <label>
                     Enter Description <br/>
                     <input type="text" placeholder="Enter Description" required/>
