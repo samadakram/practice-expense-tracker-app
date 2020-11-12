@@ -20,13 +20,13 @@ export const TransactionProvider = ({children})=>{
                 desc: transObj.desc
             }
         })
-        return(
-            <TransactionContext.Provider value={{
-                transactions: state,
-                addTransaction
-            }} >
-                {children}
-            </TransactionContext.Provider>
-        )
-    }
+    }   
+    return(
+    <TransactionContext.Provider value={{
+        transactions: state,
+        addTransaction
+    }} >
+        {children}
+    </TransactionContext.Provider>
+    )
 }
