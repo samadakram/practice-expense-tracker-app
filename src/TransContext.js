@@ -1,8 +1,8 @@
 const { createContext } = require("react")
 
 const initialTransactions = [
-    {amount: 500, desc: "Cash"},
-    {amount: -40, desc: "BOOK"},
+    {amount: 100, desc: "Cash"},
+    {amount: -40, desc: "Book"},
     {amount: -200, desc: "Camera"}
 ]
 
