@@ -28,4 +28,8 @@
 .transaction-list > li{
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 0 10px gray;
+    padding: 10px 5px;
+    margin: 5px 0;
+    background-color: white;
 }
