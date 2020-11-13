@@ -3,7 +3,7 @@ import {TransContext} from './transContext';
 
 function Child() {
 
-    let transactions = useContext(TransContext);
+    let {transactions} = useContext(TransContext);
 
     return (
         <div className="container">
