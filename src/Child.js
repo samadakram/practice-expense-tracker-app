@@ -3,10 +3,10 @@ import React from 'react';
 function Child() {
 
     let transaction = [
-        {amount: 500, desc: "Cash"},
-        {amount: -100, desc: "Chocolate"},
-        {amount: 200, desc: "vage"},
-        {amount: -50, desc: "Easy Load"}
+        { amount: 500, desc: "Cash" },
+        { amount: -100, desc: "Chocolate" },
+        { amount: 200, desc: "vage" },
+        { amount: -50, desc: "Easy Load" }
     ]
 
     return (
@@ -22,10 +22,14 @@ function Child() {
             <h3>History</h3>
             <hr />
             <ul className="transaction-list">
-                <li>
-                    <span> Cash </span>
-                    <span> $500 </span>
-                </li>
+                {transaction.map((transObj, ind) => {
+                    return (
+                        <li key={ind} >
+                            <span> {transObj.desc} </span>
+                            <span> ${transObj.amount} </span>
+                        </li>
+                    )
+                })}
             </ul>
             <h3>Add new transaction</h3>
             <hr />
@@ -38,7 +42,7 @@ function Child() {
                 <br />
                 <label>
                     Enter Amount <br />
-                    <input type="number" placeholder="Enter Amount"/>
+                    <input type="number" placeholder="Enter Amount" />
                 </label>
                 <br />
                 <input type="submit" value="ADD TRANSACTION" />
