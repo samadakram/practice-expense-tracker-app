@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {TransContext} from './transContext';
 
 function Child() {
 
-    let {transactions} = useContext(TransContext);
+    let {transactions, addTransaction} = useContext(TransContext);
+    let [newDesc, setDesc] = useState("");
+    let [newAmount, setAmount] = useState(0);
 
     const handleAddition = (event)=>{
         event.preventDefault()
+        addTransaction({
+            amount: newAmount,
+            desc: newDesc
+        })
     }
 
     return (
@@ -37,12 +43,12 @@ function Child() {
             <form className="transaction-form" onSubmit={handleAddition}>
                 <label>
                     Enter Description <br />
-                    <input type="text" placeholder="Enter Description" />
+                    <input type="text" onChange={(ev)=>setDesc(ev.target.value)} placeholder="Enter Description" />
                 </label>
                 <br />
                 <label>
                     Enter Amount <br />
-                    <input type="number" placeholder="Enter Amount" />
+                    <input type="number" onChange={(ev)=> setAmount(ev.target.value)} placeholder="Enter Amount" />
                 </label>
                 <br />
                 <input type="submit" value="ADD TRANSACTION" />
