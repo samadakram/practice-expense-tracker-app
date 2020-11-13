@@ -8,3 +8,4 @@ const initialTransactions = [
 ]
 
 export const TransContext = createContext(initialTransactions);
+
