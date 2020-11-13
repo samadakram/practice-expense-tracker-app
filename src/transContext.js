@@ -12,4 +12,22 @@ export const TransContext = createContext(initialTransactions);
 
 export const TransactionProvider = ({children}) =>{
     let [state, dispatch] = useReducer(TransactionReducer, initialTransactions)
+
+    function addTransaction(transObj){
+        dispatch({
+            type: "ADD_TRANSACTION",
+            payload: {
+                amount: transObj.amount,
+                desc: transObj.desc
+            }
+        })
+    }
+    return(
+        <TransContext.Provider value={{
+            transactions: state,
+            addTransaction
+        }} >
+            {children}
+        </TransContext.Provider>
+    )
 }
