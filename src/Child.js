@@ -1,13 +1,6 @@
 import React from 'react';
 
 function Child() {
-
-    let transactions = [
-        { amount: 500, desc: "Cash" },
-        { amount: 100, desc: "Cold Drink" },
-        { amount: 300, desc: "Hair" }
-    ]
-
     return (
         <div className="container">
             <h1 className="text-center">Expense Tracker</h1>
@@ -21,14 +14,10 @@ function Child() {
             <h3>History</h3>
             <hr />
             <ul className="transaction-list">
-                {transactions.map((transObj, ind) => {
-                    return (
-                        <li key={ind} >
-                            <span> ${transObj.desc} </span>
-                            <span> ${transObj.amount} </span>
-                        </li>
-                    )
-                })}
+                <li>
+                    <span> Cash </span>
+                    <span> $500 </span>
+                </li>
             </ul>
             <h3>Add new transaction</h3>
             <hr />
