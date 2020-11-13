@@ -1,6 +1,14 @@
 import React from 'react';
 
 function Child() {
+
+    let transaction = [
+        {amount: 500, desc: "Cash"},
+        {amount: -100, desc: "Chocolate"},
+        {amount: 200, desc: "vage"},
+        {amount: -50, desc: "Easy Load"}
+    ]
+
     return (
         <div className="container">
             <h1 className="text-center">Expense Tracker</h1>
@@ -30,7 +38,7 @@ function Child() {
                 <br />
                 <label>
                     Enter Amount <br />
-                    <input type="number" placeholder="Enter Amount" />
+                    <input type="number" placeholder="Enter Amount"/>
                 </label>
                 <br />
                 <input type="submit" value="ADD TRANSACTION" />
