@@ -9,6 +9,10 @@ function Child() {
 
     const handleAddition = (event)=>{
         event.preventDefault()
+        if (Number(newAmount) === 0){
+            alert("Please enter Correct Value");
+            return false;
+        }
         addTransaction({
             amount: Number(newAmount),
             desc: newDesc
